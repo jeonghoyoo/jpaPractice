@@ -14,8 +14,8 @@ import javax.persistence.Id;
 @Getter
 @Setter
 @NoArgsConstructor
-@Entity
-public class Orders {
+@Entity(name = "Orders")
+public class Order {
     @Id @GeneratedValue
     @Column(name = "ORDER_ID")
     private Long id;
