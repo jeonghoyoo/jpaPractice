@@ -8,6 +8,8 @@
         <class>domain.Item</class>
         <class>domain.Order</class>
         <class>domain.OrderItem</class>
+        <class>domain.Category</class>
+        <class>domain.Delivery</class>
         <properties>
             <!-- 필수 속성 -->
             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>

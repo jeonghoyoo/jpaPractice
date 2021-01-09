@@ -8,25 +8,25 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import java.util.ArrayList;
-import java.util.List;
+import javax.persistence.OneToOne;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @Entity
-public class Item {
+public class Delivery {
     @Id @GeneratedValue
-    @Column(name = "ITEM_ID")
+    @Column(name = "DELIVERY_ID")
     private Long id;
 
-    private String name;
+    @OneToOne(mappedBy = "delivery")
+    private Order order;
 
-    private int price;
+    private String city;
+    private String street;
+    private String zipcode;
 
-    private int stockQuantity;
+    private DeliveryStatus status;
 
-    @ManyToMany(mappedBy = "items")
-    private List<Category> categories = new ArrayList<>();
+
 }
