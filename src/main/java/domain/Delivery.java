@@ -14,7 +14,7 @@ import javax.persistence.OneToOne;
 @Setter
 @NoArgsConstructor
 @Entity
-public class Delivery {
+public class Delivery extends BaseEntity {
     @Id @GeneratedValue
     @Column(name = "DELIVERY_ID")
     private Long id;

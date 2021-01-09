@@ -1,3 +1,4 @@
+import domain.Book;
 import domain.Member;
 
 import javax.persistence.EntityManager;
@@ -13,6 +14,11 @@ public class ApplicationMain {
         EntityTransaction tx = em.getTransaction();
         tx.begin();
         try {
+            Book book = new Book();
+            book.setName("JPA");
+            book.setAuthor("저자");
+            book.setPrice(10000);
+            em.persist(book);
             tx.commit();
         }catch (Exception e) {
             e.printStackTrace();

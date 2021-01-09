@@ -10,6 +10,9 @@
         <class>domain.OrderItem</class>
         <class>domain.Category</class>
         <class>domain.Delivery</class>
+        <class>domain.Book</class>
+        <class>domain.Album</class>
+        <class>domain.Movie</class>
         <properties>
             <!-- 필수 속성 -->
             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
